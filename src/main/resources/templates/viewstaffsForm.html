@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+<div class="container main">
+
+    <!-- /.row -->
+
+    <div >
+        <h2 id="bio" >Staff Bio Data</h2>
+    </div>
+
+    <!-- /.row -->
+
+    <div class="table-responsive">
+        <table id="example" class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr class="white">
+                <th>ID</th>           
+                 <th>Surname</th>
+                 <th>Name</th>
+                <th>Phone Number</th>
+                <th>Designation</th>
+                <!--<th>Gender</th>-->
+
+                <th>Staff Details</th>
+                <th>Edit Staff Details</th>
+                <th>Remove Staff From List</th>
+
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="staffs : ${staffs}">
+                <td th:text="${staffs.id}">Text ...</td>
+                 <td th:text="${staffs.surname}">Text ...</td>
+                 <td th:text="${staffs.name}">Text ...</td>
+                <td th:text="${staffs.phoneNumber}">Text ...</td>
+
+                <td th:text="${staffs.designation}">Text ...</td>
+                <!--<td th:text="${staffs.gender}">Text ...</td>-->
+
+                <!--<td><img th:src="@{'/uploads/' + ${staffs.fileName}}" width="80" height="80"/></td>-->
+
+
+
+                <td><a  class="btn btn-primary" th:href="@{'/staffdetails/' +${staffs.id}}">See Details</a></td>
+                <td><a  class="btn btn-success" th:href="@{'/editStaff/' +${staffs.id}}">Edit </a></td>
+                <td><a class="btn btn-danger"th:href="@{'/deletestaff/' +${staffs.id}}">Delete</a></td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts"/>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header" />
+<body roleId="page-top" data-spy="scroll"
+      data-target=".navbar-fixed-top"  />
+<!---->
+
+<!--</li>-->
+<head th:replace="common/header :: navbar" />
+<img class="img-responsive" src="/images/muskol.png" alt="muskol" />
+
+
+
+<body class="contained">
+<h3 align="center">MODIFY STAFF DATAS</h3>
+
+<div class="container">
+<form action ="#" th:action="@{/updatestaff}" th:object="${staffs}" method="post" class="frm">
+    <input type="hidden" th:value="${id}" th:field="*{id}"/>
+    <table>
+
+        <tr >
+            <td width="10%" >Surname: </td>
+            <td width="90%" align="left">
+                <input type= "text" th:field ="*{surname}"/>
+                <label th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"th:class="'error'">Error Occur</label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Name</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{name}"/>
+                <label th:if="${#fields.hasErrors('Name')}" th:errors="*{name}"th:class="'error'">Error Occur></label></td>
+
+        </tr>
+        <tr>
+            <td width="10%" >PhoneNumber</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{phoneNumber}"/>
+                <label th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+
+        <tr>
+            <td width="10%" >Address</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{address}"/>
+                <label th:if="${#fields.hasErrors('address')}" th:errors="*{address}"th:class="'error'">Error Occur></label></td>
+        </tr>
+        <tr>
+            <td width="40%" >Marital Status</td>
+            <td width="150%" align="left">
+                <input type="text" th:field="*{status}"/>
+                <label th:if="${#fields.hasErrors('status')}" th:errors="*{status}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Home Town</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{hometown}"/>
+                <label th:if="${#fields.hasErrors('hometown')}" th:errors="*{hometown}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Qualification</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{qualification}"/>
+                <label th:if="${#fields.hasErrors('qualification')}" th:errors="*{qualification}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >School</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{school}"/>
+                <label th:if="${#fields.hasErrors('school')}" th:errors="*{school}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Date Of Employment</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{dateOfEmployment}"/>
+                <label th:if="${#fields.hasErrors('dateOfEmployment')}" th:errors="*{dateOfEmployment}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Date Of Birth</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{dateOfBirth}"/>
+                <label th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="10%" >Next Of Kin</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{nextOfKin}"/>
+                <label th:if="${#fields.hasErrors('nextOfKin')}" th:errors="*{nextOfKin}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+
+        <tr>
+            <td width="10%" >Designation</td>
+            <td width="90%" align="left">
+                <input type="text" th:field="*{designation}"/>
+                <label th:if="${#fields.hasErrors('designation')}" th:errors="*{designation}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+        <tr>
+            <td width="40%" >Gender</td>
+            <td width="150%" align="left">
+                <input type="text" th:field="*{gender}"/>
+                <label th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"th:class="'error'">Error Occur></label></td>
+        </tr>
+
+
+
+
+        <hr>
+
+        <tr>
+            <td><a href="/updatestaff"><button type="submit" class="btn btn-primary ">Click to Save change(s)</button></a></td>
+
+        </tr>
+
+    </table>
+
+    <!--<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="my ModalLabel" aria-hidden="true">-->
+        <!--<div class="modal-dialog" role="document">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<h5 class="modal-title" id="exampleModalLabel">Staff Update</h5>-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                        <!--<span aria-hidden="true">&times;</span>-->
+                    <!--</button>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                    <!--<p>Staff Sucessfully Updated</p>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>-->
+                    <!--&lt;!&ndash;< button type="button" class="btn btn-primary">Save changes</hrefbutton>&ndash;&gt;-->
+                    <!--<a href="" class="btn btn-primary editRef">Update data</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</form>
+</div>
+<div th:replace="common/header :: body-bottom-scripts"/>
+<script>
+    $(document).ready(function() {
+      $('#example').DataTable();
+//        $("triggerEdit").click(function (e) {
+//         e.preventDefault();
+//           $("editModal .editRef").attr("href",$(this).attr("href"));
+//            setTimeout(function () {
+//                $("editModal").modal();
+//            },10000);
+//
+//       })
+    } );
+</script>
+</body>
+</html>

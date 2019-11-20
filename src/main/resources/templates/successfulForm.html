@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<!--<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">-->
+<!--<head th:replace="common/header :: navbar"/>-->
+<!--<div class="container main">-->
+<!-- CSS INCLUDE -->
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"></link>
+
+<!-- EOF CSS INCLUDE -->
+
+
+
+<body class="contained">
+
+<!-- START PAGE CONTAINER -->
+<div class="container-fluid">
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <h2>
+            <span class="fa fa-arrow-circle-o-left"></span> Successful
+        </h2>
+    </div>
+
+    <table id="t02" cellpadding="2">
+        <tr>
+            <th>
+                <a href="/viewstaffsForm"><h3 align="center">View All Staffs</h3></a>
+
+                <a href="/homepage" th:align="center"><h3>Go Back To Home</h3></a>
+            </th>
+
+    </table>
+
+
+
+    <!-- END PAGE TITLE -->
+    <div class="column">
+        <table class="table datatable">
+            <thead>
+            <tr>
+                <th>ID</th>           
+                 <th>Surname</th>
+                 <th>Name</th>
+                <th>Phone Number</th>
+                <th>Marital Status</th>
+                <th>Address</th>
+                <th>Date Of Employment</th>
+                <th>Date Of Birth</th>
+                <th>Next Of Kin</th>
+                <th>Home Town</th>
+                <th>School</th>
+                <th>Qualification</th>
+                <th>Designation</th>
+                <th>Gender</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="staff : ${staff}">
+                <td th:text="${staff.id}">Text ...</td>
+                 <td th:text="${staff.surname}">Text ...</td>
+                 <td th:text="${staff.name}">Text ...</td>
+                <td th:text="${staff.phoneNumber}">Text ...</td>
+                <td th:text="${staff.status}">Text.....</td>
+                <td th:text="${staff.address}">Text ...</td>
+                <td th:text="${staff.dateOfBirth}">Text ...</td>
+                <td th:text="${staff.dateOfEmployment}">Text ...</td>
+                <td th:text="${staff.nextOfKin}">Text ...</td>
+                <td th:text="${staff.hometown}">Text ...</td>
+                <td th:text="${staff.school}">Text ...</td>
+                <td th:text="${staff.qualification}">Text ...</td>
+                <td th:text="${staff.designation}">Text ...</td>
+                <td th:text="${staff.gender}">Text ...</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- END PAGE CONTAINER -->
+</div>
+<!--<script-->
+<!--src="https://code.jquery.com/jquery-1.11.1.min.js"-->
+<!--integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="-->
+<!--crossorigin="anonymous"></script>-->
+
+
+<!--<script-->
+<!--src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"-->
+<!--integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"-->
+<!--crossorigin="anonymous"></script>-->
+<div th:replace="common/header :: body-bottom-scripts" />
+
+</body>
+</html>

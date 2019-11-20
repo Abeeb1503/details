@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+<img class="img-responsive" src="/images/muskol.png" alt="muskol" />
+<div class="container main">
+
+    <h2 align ="center" id="bdata"> BIO DATA OF STAFFS</h2>
+
+    <div  class="deta" th:each="staffs : ${details}">
+    <table id="example">
+
+        <div>
+            <tr>
+                <td><h3>STAFF ID :</h3></td>
+                <td><h4 th:text="${staffs.id}"></h4></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr>
+                <td><h3>First Name :</h3></td>
+                <td ><h4 th:text="${staffs.name}"></h4></td>
+            </tr>
+        </div>
+
+            <div>
+                <tr>
+                    <td><h3>Last Name :</h3></td>
+                    <td ><h4 th:text="${staffs.surname}"></h4></td>
+                </tr>
+            </div>
+
+            <div>
+                <tr>
+                    <td><h3>Marital Status :</h3></td>
+                    <td ><h4 th:text="${staffs.status}"></h4></td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td><h3>Address :</h3></td>
+                    <td ><h4 th:text="${staffs.address}"></h4></td>
+                </tr>
+            </div>
+
+            <div>
+                <tr>
+                    <td><h3>Home Town :</h3></td>
+                    <td ><h4 th:text="${staffs.hometown}"></h4></td>
+                </tr>
+            </div>
+
+            <div>
+                <tr>
+                    <td><h3>Qualification :</h3></td>
+                    <td ><h4 th:text="${staffs.qualification}"></h4></td>
+                </tr>
+            </div>
+
+            <div>
+                <tr>
+                    <td><h3>School Attended:</h3></td>
+                    <td ><h4 th:text="${staffs.school}"></h4></td>
+                </tr>
+            </div>
+
+
+            <div>
+                <tr>
+                    <td><h3>Date Of Employment :</h3></td>
+                    <td ><h4 th:text="${staffs.dateOfEmployment}"></h4></td>
+                </tr>
+            </div>
+
+
+            <div>
+                <tr>
+                    <td><h3>Designation :</h3></td>
+                    <td ><h4 th:text="${staffs.designation}"></h4></td>
+                </tr>
+            </div>
+
+
+        <div>
+            <tr>
+                <td><h3>Date Of Birth :</h3></td>
+                <td ><h4 th:text="${staffs.dateOfBirth}"></h4></td>
+            </tr>
+        </div>
+
+
+        <div>
+            <tr>
+                <td><h3>Next Of Kin :</h3></td>
+                <td ><h4 th:text="${staffs.nextOfKin}"></h4></td>
+            </tr>
+        </div>
+
+
+        <div>
+            <tr>
+                <td><h3>Phone Number :</h3></td>
+                <td ><h4 th:text="${staffs.phoneNumber}"></h4></td>
+            </tr>
+        </div>
+
+
+        <div>
+            <tr>
+                <td><h3>Gender :</h3></td>
+                <td ><h4 th:text="${staffs.gender}"></h4></td>
+            </tr>
+        </div>
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div th:replace="common/header :: body-bottom-scripts"/>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+
+
+  </div>
+     </div>
+
+   </body>
+        </html>

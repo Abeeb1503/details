@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header" />
+<body roleId="page-top" data-spy="scroll"
+      data-target=".navbar-fixed-top"  />
+<!---->
+
+<!--</li>-->
+<head th:replace="common/header :: navbar" />
+
+<div class="container">
+
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Staff Registration</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" th:action="@{/staff}"  >
+
+                <div class="form-group">
+                    <label for="surname" class="cols-sm-2 control-label">First
+                        Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.surname}" id="surname" name="surname"
+                                                                                                         roleId="surname" placeholder="Enter your first name"
+                                                                                                         required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Last
+                        Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.name}" id="name" name="name"
+                                                                                                         roleId="name" placeholder="Enter your last name"
+                                                                                                         required="required" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="status"  class="cols-sm-2 control-label">Marital Status:</label>
+                    <select class="form-control" th:value="${staffs.status}" name="status" id="status" roleId="status">
+                        <option disabled="disabled" selected="selected" > -- select marital --</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="address" class="cols-sm-2 control-label">Address </label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelop fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.address}" id="address" name="address" roleId="address"
+                                                                                                         placeholder="Input your address here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hometown" class="cols-sm-2 control-label">Hometown </label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelop fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.hometown}" id="hometown" name="hometown" roleId="hometown"
+                                                                                                         placeholder="Your Home town please" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for=" qualification" class="cols-sm-2 control-label">Qualification</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.qualification}" id=" qualification" name="qualification" roleId="qualification"
+                                                                                                         placeholder="state your qualification here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="school" class="cols-sm-2 control-label">School</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.school}" id="school" name="school" roleId="school"
+                                                                                                         placeholder="Input school attended here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber" class="cols-sm-2 control-label">Phone Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.phoneNumber}" id="phoneNumber" name="phoneNumber" roleId="phoneNumber"
+                                                                                                         placeholder="Input phone number here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfEmployment" class="cols-sm-2 control-label">Date Of Employment</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-date fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.dateOfEmployment}" id="dateOfEmployment" name="dateOfEmployment" roleId="dateOfEmployment"
+                                                                                                         placeholder="Input Employment Date here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="designation" class="cols-sm-2 control-label">Designation</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.designation}" id="designation" name="designation" roleId="designation"
+                                                                                                         placeholder="Designation" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--<div class="form-group">-->
+                <!--<label for="dateOfBirth" class="cols-sm-2 control-label">Pick Date of Birth:</label>-->
+                <!--<div class="input-append date form_datetime input-group" data-date="2016-10-21T15:25:00Z">-->
+                <!--<input class="form-control" type="text" value=""-->
+                <!--th:value="${staffs.dateOfBirth}" name="dateOfBirth"-->
+                <!--id="dateOfBirth" required="required"/>-->
+                <!--<span class="input-group-addon"><i class="fa fa-times" aria-hidden="true"></i></span>-->
+                <!--<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="form-group">-->
+                <!--<label for="dateOfEmployment" class="cols-sm-2 control-label">Pick Employment date:</label>-->
+                <!--<div class="input-append date form_datetime input-group" data-date="2016-10-21T15:25:00Z">-->
+                <!--<input class="form-control" type="text" value=""-->
+                <!--th:value="${staffs.dateOfEmployment}" name="dateOfEmployment"-->
+                <!--id="dateOfEmployment" required="required"/>-->
+                <!--<span class="input-group-addon"><i class="fa fa-times" aria-hidden="true"></i></span>-->
+                <!--<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="form-group">
+                    <label for="dateOfBirth" class="cols-sm-2 control-label">Date Of Birth</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.dateOfBirth}" id="dateOfBirth" name="dateOfBirth" roleId="dateOfEmployment"
+                                                                                                         placeholder="Input dateOfBirth here" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="nextOfKin" class="cols-sm-2 control-label">Next Of Kin</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone fa"
+                                                                   aria-hidden="true"></i></span> <input type="text" class="form-control"
+                                                                                                         th:value="${staffs.nextOfKin}" id="nextOfKin" name="nextOfKin" roleId="nextOfKin"
+                                                                                                         placeholder="nextOfKin" required="required" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="gender"  class="cols-sm-2 control-label">Gender:</label>
+                    <select class="form-control" th:value="${staffs.gender}" name="gender" id="gender" roleId="gender">
+                        <option disabled="disabled" selected="selected" > -- Pick Your Gender --</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+
+
+
+
+                <div class="form-group ">
+                    <button type="submit"
+                            class="btn btn-primary btn-lg btn-block login-button">Register Staff!</button>
+                </div>
+
+                <hr />
+
+                <div class="form-group ">
+                    <a class="btn btn-info btn-lg btn-block login-button"
+                       th:href="@{/}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts" />
+
+</body>
+</html>
